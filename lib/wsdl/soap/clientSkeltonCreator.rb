@@ -33,7 +33,7 @@ class ClientSkeltonCreator
     result = ""
     if @modulepath
       result << "\n"
-      result << @modulepath.collect { |ele| "module #{ele}" }.join("; ")
+      result << @modulepath.each_line.collect { |ele| "module #{ele}" }.join("; ")
       result << "\n\n"
     end
     services.ports.each do |port|
@@ -42,7 +42,7 @@ class ClientSkeltonCreator
     end
     if @modulepath
       result << "\n\n"
-      result << @modulepath.collect { |ele| "end" }.join("; ")
+      result << @modulepath.each_line.collect { |ele| "end" }.join("; ")
       result << "\n"
     end
     result
