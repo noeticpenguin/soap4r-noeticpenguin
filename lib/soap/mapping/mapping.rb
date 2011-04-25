@@ -541,8 +541,8 @@ module Mapping
   private
 
     def class_schema_variable(sym, klass)
-      var = "@@#{sym}".to_sym
-      klass.class_variables.include?(var) ? klass.class_eval(var) : nil
+      var = "@@#{sym}"
+      klass.class_variables.include?(var.to_sym) ? klass.class_eval(var) : nil
     end
 
     def protect_mapping(opt)
