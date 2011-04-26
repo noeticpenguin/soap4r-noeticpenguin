@@ -72,10 +72,10 @@ class Router
     obj = factory.create        # a dummy instance for introspection
     ::SOAP::RPC.defined_methods(obj).each do |name|
       begin
-        qname = XSD::QName.new(namespace, name)
-        param_def = ::SOAP::RPC::SOAPMethod.derive_rpc_param_def(obj, name)
+        qname = XSD::QName.new(namespace, name.to_s)
+        param_def = ::SOAP::RPC::SOAPMethod.derive_rpc_param_def(obj, name.to_s)
         opt = create_styleuse_option(:rpc, :encoded)
-        add_rpc_request_operation(factory, qname, nil, name, param_def, opt)
+        add_rpc_request_operation(factory, qname, nil, name.to_s, param_def, opt)
       rescue SOAP::RPC::MethodDefinitionError => e
         p e if $DEBUG
       end
@@ -85,10 +85,10 @@ class Router
   def add_rpc_servant(obj, namespace)
     ::SOAP::RPC.defined_methods(obj).each do |name|
       begin
-        qname = XSD::QName.new(namespace, name)
-        param_def = ::SOAP::RPC::SOAPMethod.derive_rpc_param_def(obj, name)
+        qname = XSD::QName.new(namespace, name.to_s)
+        param_def = ::SOAP::RPC::SOAPMethod.derive_rpc_param_def(obj, name.to_s)
         opt = create_styleuse_option(:rpc, :encoded)
-        add_rpc_operation(obj, qname, nil, name, param_def, opt)
+        add_rpc_operation(obj, qname, nil, name.to_s, param_def, opt)
       rescue SOAP::RPC::MethodDefinitionError => e
         p e if $DEBUG
       end
