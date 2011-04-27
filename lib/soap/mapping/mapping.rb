@@ -313,7 +313,7 @@ module Mapping
       end
       iv = obj.instance_variables
       name = Mapping.safevarname(attr_name)
-      if iv.include?("@#{name}")
+      if iv.include?("@#{name}".to_sym)
         return obj.instance_variable_get("@#{name}")
       elsif iv.include?("@#{attr_name}".to_sym)
         return obj.instance_variable_get("@#{attr_name}")
