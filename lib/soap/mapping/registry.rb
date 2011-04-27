@@ -204,7 +204,7 @@ module RegistrySupport
   end
 
   def schema_definition_from_elename(qname)
-    @elename_schema_definition[qname]
+    @elename_schema_definition[qname] || find_schema_definition(qname.name)
   end
 
   def schema_definition_from_type(type)
