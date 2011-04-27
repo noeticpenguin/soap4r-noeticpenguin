@@ -25,7 +25,7 @@ class TestSection < Test::Unit::TestCase
 
   def test_marshal
     # avoid name crash (<item> => an Item when a class Item is defined)
-    if ::Object.constants.include?("Item")
+    if ::Object.constants.include?("Item".to_sym)
       ::Object.instance_eval { remove_const("Item") }
     end
     TestUtil.require(DIR, 'mysample.rb')

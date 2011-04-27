@@ -45,7 +45,7 @@ class TestSOAPENC < Test::Unit::TestCase
   end
 
   def setup_classdef
-    if ::Object.constants.include?("Version_struct")
+    if ::Object.constants.include?("Version_struct".to_sym)
       ::Object.instance_eval { remove_const("Version_struct") }
     end
     gen = WSDL::SOAP::WSDL2Ruby.new

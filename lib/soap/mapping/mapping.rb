@@ -255,7 +255,7 @@ module Mapping
     if ivars.include?('@schema_type'.to_sym)
       name = obj.instance_variable_get('@schema_type')
     end
-    if ivars.include?('@schema_ns')
+    if ivars.include?('@schema_ns'.to_sym)
       namespace = obj.instance_variable_get('@schema_ns')
     end
     if !name or !namespace

@@ -82,7 +82,7 @@ class TestRPC < Test::Unit::TestCase
   end
 
   def setup_classdef
-    if ::Object.constants.include?("Echo")
+    if ::Object.constants.include?("Echo".to_sym)
       ::Object.instance_eval { remove_const("Echo") }
     end
     gen = WSDL::SOAP::WSDL2Ruby.new
