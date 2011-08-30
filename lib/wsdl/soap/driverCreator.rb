@@ -48,7 +48,7 @@ class DriverCreator
     end
     if @modulepath
       result << "\n"
-      @modulepath.each_line do |name|
+      @modulepath.each do |name|
         result << "end\n"
       end
     end
