@@ -1,20 +1,35 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    awesome_print (0.4.0)
+    coderay (0.9.8)
     git (1.2.5)
     jeweler (1.5.2)
       bundler (~> 1.0.0)
       git (>= 1.2.5)
       rake
+    method_source (0.6.6)
+      ruby_parser (~> 2.0.5)
+    pry (0.9.6.2)
+      coderay (~> 0.9.8)
+      method_source (~> 0.6.5)
+      ruby_parser (~> 2.0.5)
+      slop (~> 2.1.0)
     rake (0.8.7)
     rcov (0.9.9)
+    ruby_parser (2.0.6)
+      sexp_processor (~> 3.0)
+    sexp_processor (3.0.7)
     shoulda (2.11.3)
+    slop (2.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  awesome_print
   bundler (~> 1.0.0)
   jeweler (~> 1.5.2)
+  pry
   rcov
   shoulda
