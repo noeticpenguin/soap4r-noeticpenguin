@@ -252,10 +252,10 @@ module Mapping
   def self.obj2element(obj)
     name = namespace = nil
     ivars = obj.instance_variables
-    if ivars.include?('@schema_type')
+    if ivars.include?(:@schema_type)
       name = obj.instance_variable_get('@schema_type')
     end
-    if ivars.include?('@schema_ns')
+    if ivars.include?(:@schema_ns)
       namespace = obj.instance_variable_get('@schema_ns')
     end
     if !name or !namespace
@@ -313,9 +313,9 @@ module Mapping
       end
       iv = obj.instance_variables
       name = Mapping.safevarname(attr_name)
-      if iv.include?("@#{name}")
+      if iv.include?("@#{name}".to_sym)
         return obj.instance_variable_get("@#{name}")
-      elsif iv.include?("@#{attr_name}")
+      elsif iv.include?("@#{attr_name}".to_sym)
         return obj.instance_variable_get("@#{attr_name}")
       end
       if obj.respond_to?(name)
