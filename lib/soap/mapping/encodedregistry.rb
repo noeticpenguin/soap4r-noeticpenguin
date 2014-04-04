@@ -139,6 +139,8 @@ class EncodedRegistry
     [::FalseClass,   ::SOAP::SOAPBoolean,    BasetypeFactory],
     [::String,       ::SOAP::SOAPString,     StringFactory,
       {:derived_class => true}],
+    [::Symbol,       ::SOAP::SOAPString,     StringFactory,
+      {:derived_class => true}],
     [::DateTime,     ::SOAP::SOAPDateTime,   DateTimeFactory],
     [::Date,         ::SOAP::SOAPDate,       DateTimeFactory],
     [::Time,         ::SOAP::SOAPDateTime,   DateTimeFactory],
