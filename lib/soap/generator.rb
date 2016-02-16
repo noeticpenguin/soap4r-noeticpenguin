@@ -176,7 +176,7 @@ public
   def encode_tag(elename, attrs = nil)
     if attrs.nil? or attrs.empty?
       @buf << "\n#{ @indent }<#{ elename }>"
-      return 
+      return
     end
     ary = []
     attrs.each do |key, value|
@@ -264,8 +264,13 @@ private
         end
       }.join
     else
-      str.gsub(@encode_char_regexp) { |c| EncodeMap[c] }
+      safe_encode(str).gsub(@encode_char_regexp) { |c| EncodeMap[c] }
     end
+  end
+
+  def safe_encode(str)
+    return '' if str.nil? || str.strip == ''
+    str.encode('UTF-8', 'binary', invalid: :replace, undef: :replace, replace: '')
   end
 
   def get_encode_char_regexp
