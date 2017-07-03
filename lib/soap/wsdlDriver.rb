@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # SOAP4R - SOAP WSDL driver
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -32,7 +33,7 @@ class WSDLDriverFactory
   def initialize(wsdl)
     @wsdl = import(wsdl)
   end
-  
+
   def inspect
     sprintf("#<%s:%s:0x%x\n\n%s>", self.class.name, @wsdl.name, __id__, dump_method_signatures)
   end

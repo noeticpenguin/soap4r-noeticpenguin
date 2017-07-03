@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # SOAP4R - CGI/mod_ruby stub library
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -113,7 +114,7 @@ class CGIStub < Logger::Application
     @soaplet = ::SOAP::RPC::SOAPlet.new(@router)
     on_init
   end
-  
+
   def on_init
     # do extra initialization in a derived class if needed.
   end

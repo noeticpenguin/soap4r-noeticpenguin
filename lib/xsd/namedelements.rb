@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # XSD4R - WSDL named element collection.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -63,7 +64,7 @@ class NamedElements
     @elements << rhs
     self
   end
-  
+
   def delete(rhs)
     rv = @elements.delete(rhs)
     @cache.clear

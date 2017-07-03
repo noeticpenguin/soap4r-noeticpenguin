@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # SOAP4R - encoded mapping registry.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -339,7 +340,7 @@ private
       return base2soap(obj, type)
     end
     cause = nil
-    begin 
+    begin
       if definition = schema_definition_from_class(obj.class)
         return stubobj2soap(obj, definition)
       end

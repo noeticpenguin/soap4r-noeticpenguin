@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - WSDL information base.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -29,7 +30,7 @@ class Info
   end
 
   def parse_element(element); end	# abstract
-  
+
   def parse_attr(attr, value); end	# abstract
 
   def parse_epilogue; end		# abstract

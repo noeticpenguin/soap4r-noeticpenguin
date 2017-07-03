@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - XMLSchema complexType extension definition for WSDL.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -69,7 +70,7 @@ class ComplexExtension < Info
       basetype.check_type
     end
   end
-  
+
   def parse_element(element)
     case element
     when AllName

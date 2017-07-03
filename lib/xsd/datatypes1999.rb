@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # XSD4R - XML Schema Datatype 1999 support
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 

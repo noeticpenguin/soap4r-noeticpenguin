@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - XMLSchema simpleType extension definition for WSDL.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -27,7 +28,7 @@ class SimpleExtension < Info
   def targetnamespace
     parent.targetnamespace
   end
-  
+
   def valid?(value)
     true
   end

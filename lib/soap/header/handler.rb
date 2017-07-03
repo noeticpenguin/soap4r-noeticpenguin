@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # SOAP4R - SOAP Header handler item
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
