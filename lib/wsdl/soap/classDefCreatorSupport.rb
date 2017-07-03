@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - Creating class code support from WSDL.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -213,13 +214,13 @@ private
   end
 
   def name_element(element)
-    return element.name if element.name 
+    return element.name if element.name
     return element.ref if element.ref
     raise RuntimeError.new("cannot define name of #{element}")
   end
 
   def name_attribute(attribute)
-    return attribute.name if attribute.name 
+    return attribute.name if attribute.name
     return attribute.ref if attribute.ref
     raise RuntimeError.new("cannot define name of #{attribute}")
   end

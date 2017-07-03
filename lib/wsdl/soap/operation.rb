@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - WSDL SOAP operation definition.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -23,7 +24,7 @@ class Operation < Info
     attr_reader :bodyparts
     attr_reader :faultpart
     attr_reader :soapaction
-    
+
     def initialize(style, use, encodingstyle, op_name, optype_name,
         headerparts, bodyparts, faultpart, soapaction)
       @style = style

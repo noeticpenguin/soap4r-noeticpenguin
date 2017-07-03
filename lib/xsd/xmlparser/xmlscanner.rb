@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # XSD4R - XMLScan XML parser library.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 

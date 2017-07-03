@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - Base definitions.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 

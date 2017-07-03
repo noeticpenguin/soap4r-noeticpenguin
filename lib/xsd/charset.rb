@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # XSD4R - Charset handling library.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -54,7 +55,7 @@ public
           Proc.new { |str| NKF.nkf('-eXm0', str) }
       rescue LoadError
       end
-  
+
       begin
 	require 'uconv'
 	@internal_encoding = 'UTF8'

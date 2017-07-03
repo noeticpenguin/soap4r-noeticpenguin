@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - XMLSchema content base definition for WSDL.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 

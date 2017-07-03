@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # SOAP4R - WEBrick HTTP Server
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -76,7 +77,7 @@ class HTTPServer < Logger::Application
   def add_rpc_servant(obj, namespace = @default_namespace)
     @router.add_rpc_servant(obj, namespace)
   end
-  
+
   def add_request_headerhandler(factory)
     @router.add_request_headerhandler(factory)
   end

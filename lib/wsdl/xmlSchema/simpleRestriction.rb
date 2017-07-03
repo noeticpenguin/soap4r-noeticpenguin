@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # WSDL4R - XMLSchema simpleContent restriction definition for WSDL.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -42,7 +43,7 @@ class SimpleRestriction < Info
     @fixed = {}
     @attributes = XSD::NamedElements.new
   end
-  
+
   def valid?(value)
     return false unless check_restriction(value)
     return false unless check_length(value)

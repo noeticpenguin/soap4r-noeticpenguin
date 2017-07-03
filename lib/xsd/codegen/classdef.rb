@@ -1,3 +1,4 @@
+# -*- encoding : utf-8 -*-
 # XSD4R - Generating class definition code
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -43,7 +44,7 @@ class ClassDef < ModuleDef
   def dump
     buf = ""
     unless @requirepath.empty?
-      buf << dump_requirepath 
+      buf << dump_requirepath
     end
     buf << dump_emptyline unless buf.empty?
     package = @name.split(/::/)[0..-2]
