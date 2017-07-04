@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # SOAP4R - Mapping registry.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -21,7 +20,7 @@ end
 
 module Mapping
 
-
+  
 module MappedException; end
 
 
@@ -227,7 +226,7 @@ module RegistrySupport
       schema_definition_from_class(obj_class)
     end
   end
-
+  
   def add_attributes2soap(obj, ele)
     if definition = Mapping.schema_definition_classdef(obj.class)
       add_definedattributes2soap(obj, ele, definition)

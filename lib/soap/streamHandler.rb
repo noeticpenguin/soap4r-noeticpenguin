@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # SOAP4R - Stream handler.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -131,10 +130,10 @@ class HTTPStreamHandler < StreamHandler
   end
 
 public
-
+  
   attr_reader :client
   attr_accessor :wiredump_file_base
-
+  
   MAX_RETRY_COUNT = 10       	# [times]
 
   def self.create(options)

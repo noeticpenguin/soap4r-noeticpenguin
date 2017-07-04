@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # WSDL4R - Creating method definition from WSDL
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -179,9 +178,9 @@ __EOD__
 
   def mapping_info2str(mapped_class, qname)
     if qname.nil?
-      "[#{ndq(mapped_class)}]"
+      "[#{ndq(mapped_class)}]" 
     else
-      "[#{ndq(mapped_class)}, #{ndq(qname.namespace)}, #{dq(qname.name)}]"
+      "[#{ndq(mapped_class)}, #{ndq(qname.namespace)}, #{dq(qname.name)}]" 
     end
   end
 
