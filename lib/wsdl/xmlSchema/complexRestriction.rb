@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # WSDL4R - XMLSchema complexType restriction definition for WSDL.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -59,7 +58,7 @@ class ComplexRestriction < Info
       basetype.check_type if basetype
     end
   end
-
+  
   def parse_element(element)
     case element
     when AllName

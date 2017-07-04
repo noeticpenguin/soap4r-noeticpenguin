@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # WSDL4R - WSDL part definition.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 

@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # SOAP4R - RPC Proxy library.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -489,7 +488,7 @@ private
       params = {}
       idx = 0
       names.each do |name|
-        params[name] = Mapping.obj2soap(values[idx], mapping_registry,
+        params[name] = Mapping.obj2soap(values[idx], mapping_registry, 
           types[idx], opt)
         params[name].elename = XSD::QName.new(nil, name)
         idx += 1

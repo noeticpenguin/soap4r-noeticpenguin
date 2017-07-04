@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # soap/attachment.rb: SOAP4R - SwA implementation.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 

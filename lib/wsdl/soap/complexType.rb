@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # WSDL4R - SOAP complexType definition for WSDL.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -139,7 +138,7 @@ private
     case element
     when XMLSchema::Element
       if element.type
-        element.type
+        element.type 
       elsif element.local_simpletype
         element.local_simpletype.base
       else

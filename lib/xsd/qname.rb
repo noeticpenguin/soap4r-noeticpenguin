@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # XSD4R - XML QName definition.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -57,7 +56,7 @@ class QName
   def hash
     @namespace.hash ^ @name.hash
   end
-
+  
   def to_s
     "{#{ namespace }}#{ name }"
   end

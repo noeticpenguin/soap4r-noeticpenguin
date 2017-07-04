@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # XSD4R - XMLParser XML parser library.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
@@ -30,7 +29,7 @@ class LibXMLParser < XSD::XMLParser::Parser
     @parser.callbacks = self
     @parser.parse
   end
-
+  
   ENTITY_REF_MAP = {
     'lt' => '<',
     'gt' => '>',
@@ -62,7 +61,7 @@ class LibXMLParser < XSD::XMLParser::Parser
   #def on_end_document()
   #  nil
   #end
-
+  
   def on_start_element_ns(name, attributes, prefix, uri, namespaces)
     name = "#{prefix}:#{name}" unless prefix.nil?
     namespaces.each do |key,value|

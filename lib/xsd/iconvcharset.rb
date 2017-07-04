@@ -1,4 +1,3 @@
-# -*- encoding : utf-8 -*-
 # XSD4R - Charset handling with iconv.
 # Copyright (C) 2000-2007  NAKAMURA, Hiroshi <nahi@ruby-lang.org>.
 
