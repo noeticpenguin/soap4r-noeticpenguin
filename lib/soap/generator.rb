@@ -96,7 +96,7 @@ public
       add_reftarget(obj.elename.name, obj)
       ref = SOAPReference.new(obj)
       ref.elename = ref.elename.dup_name(obj.elename.name)
-      obj.precedents.clear	# Avoid cyclic delay.
+      obj.precedents.clear  # Avoid cyclic delay.
       obj.encodingstyle = parent.encodingstyle
       # SOAPReference is encoded here.
       obj = ref
@@ -134,9 +134,9 @@ public
     if obj.is_a?(SOAPBody)
       @reftarget = obj
       obj.encode(self, ns, attrs) do |child|
-	indent_backup, @indent = @indent, @indent + @indentstr
+        indent_backup, @indent = @indent, @indent + @indentstr
         encode_data(ns.clone_ns, child, obj)
-	@indent = indent_backup
+        @indent = indent_backup
       end
       @reftarget = nil
     else
@@ -145,9 +145,9 @@ public
         Generator.assign_ns(attrs, ns, XSD::Namespace)
       end
       obj.encode(self, ns, attrs) do |child|
-	indent_backup, @indent = @indent, @indent + @indentstr
+        indent_backup, @indent = @indent, @indent + @indentstr
         encode_data(ns.clone_ns, child, obj)
-	@indent = indent_backup
+        @indent = indent_backup
       end
     end
   end
@@ -176,7 +176,7 @@ public
   def encode_tag(elename, attrs = nil)
     if attrs.nil? or attrs.empty?
       @buf << "\n#{ @indent }<#{ elename }>"
-      return 
+      return
     end
     ary = []
     attrs.each do |key, value|
@@ -190,7 +190,7 @@ public
     else
       @buf << "\n#{ @indent }<#{ elename } " <<
         ary.join("\n#{ @indent }#{ @indentstr * 2 }") <<
-	'>'
+      '>'
     end
   end
 
@@ -264,8 +264,16 @@ private
         end
       }.join
     else
-      str.gsub(@encode_char_regexp) { |c| EncodeMap[c] }
+      safe_encode(str).gsub(@encode_char_regexp) { |c| EncodeMap[c] }
     end
+  end
+
+  def safe_encode(str)
+    return '' if str.nil? || str.strip == ''
+    str.encode("ISO-8859-1").encode("UTF-8")
+  rescue => e
+    str = str.gsub(e.error_char, "")
+    safe_encode(str)
   end
 
   def get_encode_char_regexp
